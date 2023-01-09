@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3854CCDC296BAA2B00B9F633 /* HeartDiseasePredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCDB296BAA2B00B9F633 /* HeartDiseasePredictorApp.swift */; };
+		3854CCDE296BAA2B00B9F633 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCDD296BAA2B00B9F633 /* ContentView.swift */; };
+		3854CCE0296BAA2C00B9F633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3854CCDF296BAA2C00B9F633 /* Assets.xcassets */; };
+		3854CCE3296BAA2C00B9F633 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3854CCE2296BAA2C00B9F633 /* Preview Assets.xcassets */; };
+		3854CCEC296BAAA300B9F633 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCEB296BAAA300B9F633 /* UserInfo.swift */; };
+		3854CCEE296BAAF300B9F633 /* HeartDiseaseClassifierV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCED296BAAF300B9F633 /* HeartDiseaseClassifierV3.mlmodel */; };
+		3854CCF0296BAB4900B9F633 /* BodyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCEF296BAB4900B9F633 /* BodyProfile.swift */; };
+		3854CCF2296BABF800B9F633 /* BodyCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCF1296BABF800B9F633 /* BodyCondition.swift */; };
+		3854CCF4296BAC3500B9F633 /* DailyLifestyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCF3296BAC3500B9F633 /* DailyLifestyle.swift */; };
+		3854CCF6296BAC6200B9F633 /* AnalyzisResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCF5296BAC6200B9F633 /* AnalyzisResult.swift */; };
+		3854CCF8296BACA200B9F633 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCF7296BACA200B9F633 /* Result.swift */; };
+		3854CCFA296BACDD00B9F633 /* HelpActiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCF9296BACDD00B9F633 /* HelpActiveButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3854CCD8296BAA2B00B9F633 /* HeartDiseasePredictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartDiseasePredictor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3854CCDB296BAA2B00B9F633 /* HeartDiseasePredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartDiseasePredictorApp.swift; sourceTree = "<group>"; };
+		3854CCDD296BAA2B00B9F633 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3854CCDF296BAA2C00B9F633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3854CCE2296BAA2C00B9F633 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3854CCEB296BAAA300B9F633 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		3854CCED296BAAF300B9F633 /* HeartDiseaseClassifierV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HeartDiseaseClassifierV3.mlmodel; sourceTree = "<group>"; };
+		3854CCEF296BAB4900B9F633 /* BodyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyProfile.swift; sourceTree = "<group>"; };
+		3854CCF1296BABF800B9F633 /* BodyCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCondition.swift; sourceTree = "<group>"; };
+		3854CCF3296BAC3500B9F633 /* DailyLifestyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLifestyle.swift; sourceTree = "<group>"; };
+		3854CCF5296BAC6200B9F633 /* AnalyzisResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzisResult.swift; sourceTree = "<group>"; };
+		3854CCF7296BACA200B9F633 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3854CCF9296BACDD00B9F633 /* HelpActiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpActiveButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3854CCD5296BAA2B00B9F633 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3854CCCF296BAA2B00B9F633 = {
+			isa = PBXGroup;
+			children = (
+				3854CCDA296BAA2B00B9F633 /* HeartDiseasePredictor */,
+				3854CCD9296BAA2B00B9F633 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3854CCD9296BAA2B00B9F633 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3854CCD8296BAA2B00B9F633 /* HeartDiseasePredictor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3854CCDA296BAA2B00B9F633 /* HeartDiseasePredictor */ = {
+			isa = PBXGroup;
+			children = (
+				3854CCEA296BAA7A00B9F633 /* source */,
+				3854CCE9296BAA6C00B9F633 /* view */,
+				3854CCDB296BAA2B00B9F633 /* HeartDiseasePredictorApp.swift */,
+				3854CCDD296BAA2B00B9F633 /* ContentView.swift */,
+				3854CCDF296BAA2C00B9F633 /* Assets.xcassets */,
+				3854CCE1296BAA2C00B9F633 /* Preview Content */,
+			);
+			path = HeartDiseasePredictor;
+			sourceTree = "<group>";
+		};
+		3854CCE1296BAA2C00B9F633 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3854CCE2296BAA2C00B9F633 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3854CCE9296BAA6C00B9F633 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3854CCEF296BAB4900B9F633 /* BodyProfile.swift */,
+				3854CCF1296BABF800B9F633 /* BodyCondition.swift */,
+				3854CCF3296BAC3500B9F633 /* DailyLifestyle.swift */,
+				3854CCF5296BAC6200B9F633 /* AnalyzisResult.swift */,
+				3854CCF7296BACA200B9F633 /* Result.swift */,
+				3854CCF9296BACDD00B9F633 /* HelpActiveButton.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3854CCEA296BAA7A00B9F633 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				3854CCED296BAAF300B9F633 /* HeartDiseaseClassifierV3.mlmodel */,
+				3854CCEB296BAAA300B9F633 /* UserInfo.swift */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3854CCD7296BAA2B00B9F633 /* HeartDiseasePredictor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3854CCE6296BAA2C00B9F633 /* Build configuration list for PBXNativeTarget "HeartDiseasePredictor" */;
+			buildPhases = (
+				3854CCD4296BAA2B00B9F633 /* Sources */,
+				3854CCD5296BAA2B00B9F633 /* Frameworks */,
+				3854CCD6296BAA2B00B9F633 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeartDiseasePredictor;
+			productName = HeartDiseasePredictor;
+			productReference = 3854CCD8296BAA2B00B9F633 /* HeartDiseasePredictor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3854CCD0296BAA2B00B9F633 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					3854CCD7296BAA2B00B9F633 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 3854CCD3296BAA2B00B9F633 /* Build configuration list for PBXProject "HeartDiseasePredictor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3854CCCF296BAA2B00B9F633;
+			productRefGroup = 3854CCD9296BAA2B00B9F633 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3854CCD7296BAA2B00B9F633 /* HeartDiseasePredictor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3854CCD6296BAA2B00B9F633 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3854CCE3296BAA2C00B9F633 /* Preview Assets.xcassets in Resources */,
+				3854CCE0296BAA2C00B9F633 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3854CCD4296BAA2B00B9F633 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3854CCF8296BACA200B9F633 /* Result.swift in Sources */,
+				3854CCEE296BAAF300B9F633 /* HeartDiseaseClassifierV3.mlmodel in Sources */,
+				3854CCF6296BAC6200B9F633 /* AnalyzisResult.swift in Sources */,
+				3854CCF2296BABF800B9F633 /* BodyCondition.swift in Sources */,
+				3854CCDE296BAA2B00B9F633 /* ContentView.swift in Sources */,
+				3854CCEC296BAAA300B9F633 /* UserInfo.swift in Sources */,
+				3854CCDC296BAA2B00B9F633 /* HeartDiseasePredictorApp.swift in Sources */,
+				3854CCF0296BAB4900B9F633 /* BodyProfile.swift in Sources */,
+				3854CCFA296BACDD00B9F633 /* HelpActiveButton.swift in Sources */,
+				3854CCF4296BAC3500B9F633 /* DailyLifestyle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3854CCE4296BAA2C00B9F633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3854CCE5296BAA2C00B9F633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3854CCE7296BAA2C00B9F633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HeartDiseasePredictor/Preview Content\"";
+				DEVELOPMENT_TEAM = FQ683N5744;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trds.HeartDiseasePredictor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3854CCE8296BAA2C00B9F633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HeartDiseasePredictor/Preview Content\"";
+				DEVELOPMENT_TEAM = FQ683N5744;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trds.HeartDiseasePredictor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3854CCD3296BAA2B00B9F633 /* Build configuration list for PBXProject "HeartDiseasePredictor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3854CCE4296BAA2C00B9F633 /* Debug */,
+				3854CCE5296BAA2C00B9F633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3854CCE6296BAA2C00B9F633 /* Build configuration list for PBXNativeTarget "HeartDiseasePredictor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3854CCE7296BAA2C00B9F633 /* Debug */,
+				3854CCE8296BAA2C00B9F633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3854CCD0296BAA2B00B9F633 /* Project object */;
+}
