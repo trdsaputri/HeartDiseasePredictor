@@ -19,6 +19,8 @@
 		3854CCF6296BAC6200B9F633 /* AnalyzisResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCF5296BAC6200B9F633 /* AnalyzisResult.swift */; };
 		3854CCF8296BACA200B9F633 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCF7296BACA200B9F633 /* Result.swift */; };
 		3854CCFA296BACDD00B9F633 /* HelpActiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854CCF9296BACDD00B9F633 /* HelpActiveButton.swift */; };
+		E2100CB32970608500EF9E10 /* PickerForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2100CB22970608500EF9E10 /* PickerForm.swift */; };
+		E2100CB529706CAB00EF9E10 /* TextForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2100CB429706CAB00EF9E10 /* TextForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		3854CCF5296BAC6200B9F633 /* AnalyzisResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzisResult.swift; sourceTree = "<group>"; };
 		3854CCF7296BACA200B9F633 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3854CCF9296BACDD00B9F633 /* HelpActiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpActiveButton.swift; sourceTree = "<group>"; };
+		E2100CB22970608500EF9E10 /* PickerForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerForm.swift; sourceTree = "<group>"; };
+		E2100CB429706CAB00EF9E10 /* TextForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		3854CCE9296BAA6C00B9F633 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				E2100CB12970606900EF9E10 /* widget */,
 				3854CCEF296BAB4900B9F633 /* BodyProfile.swift */,
 				3854CCF1296BABF800B9F633 /* BodyCondition.swift */,
 				3854CCF3296BAC3500B9F633 /* DailyLifestyle.swift */,
@@ -105,6 +110,15 @@
 				3854CCEB296BAAA300B9F633 /* UserInfo.swift */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		E2100CB12970606900EF9E10 /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				E2100CB22970608500EF9E10 /* PickerForm.swift */,
+				E2100CB429706CAB00EF9E10 /* TextForm.swift */,
+			);
+			path = widget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +193,9 @@
 			files = (
 				3854CCF8296BACA200B9F633 /* Result.swift in Sources */,
 				3854CCEE296BAAF300B9F633 /* HeartDiseaseClassifierV3.mlmodel in Sources */,
+				E2100CB529706CAB00EF9E10 /* TextForm.swift in Sources */,
 				3854CCF6296BAC6200B9F633 /* AnalyzisResult.swift in Sources */,
+				E2100CB32970608500EF9E10 /* PickerForm.swift in Sources */,
 				3854CCF2296BABF800B9F633 /* BodyCondition.swift in Sources */,
 				3854CCDE296BAA2B00B9F633 /* ContentView.swift in Sources */,
 				3854CCEC296BAAA300B9F633 /* UserInfo.swift in Sources */,

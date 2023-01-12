@@ -17,6 +17,7 @@ struct ContentView: View {
             BodyCondition().tag(1)
             DailyLifestyle().tag(2)
         }
+        .edgesIgnoringSafeArea(.top)
         .tabViewStyle(.page)
         .accessibilityLabel("swipe to move to other form")
         .indexViewStyle(.page(backgroundDisplayMode: .always))

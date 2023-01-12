@@ -182,6 +182,12 @@ struct BodyCondition: View {
             .padding()
             
         }
+        .onAppear{
+            print("debug height: \(global.height)")
+            print("debug weight: \(global.weight)")
+            print("debug age: \(global.age)")
+            print("debug gender: \(global.Sex)")
+        }
     }
 }
 
