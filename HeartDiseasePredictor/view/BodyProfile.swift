@@ -13,6 +13,7 @@ struct BodyProfile: View {
     @ObservedObject var global = UserInfo.global
 
     
+    
     let sexs = ["Male","Female"]
     
     let ages = ["18-24", "25-29", "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65-69", "70-74", "80 or older"]
@@ -29,51 +30,61 @@ struct BodyProfile: View {
             
             ScrollView{
                 HStack{
-                    Text("Sex           ")
-                        .font(.body)
-                        .multilineTextAlignment(.leading)
-                        .padding([.top, .leading])
-                        .accessibilityLabel("Sex")
-                    
-                    Menu {
-                        Picker(selection: $global.Sex) {
-                            ForEach(sexs, id: \.self) {
-                                Text($0)
+                    VStack{
+                        HStack{
+                            Text("Sex")
+                                .font(.body)
+                                .padding(.leading)
+                                .accessibilityLabel("Sex")
+                        }.frame(maxWidth: .infinity, alignment: .leading)
+                        HStack{
+                            Section{
+                                Picker(selection: $global.Sex, label: Text("Sex")) {
+                                    ForEach(sexs, id: \.self) {
+                                        Text($0).tag($0)
+                                    }
+                                }.accessibilityLabel("please choose your sex")
+                                    .accentColor(.blue)
                             }
-                        } label: {}
-                    } label: {
-                        Text(global.Sex)
-                            .fontWeight(.medium)
-                            .frame(height: 44)
-                            .font(.body)
-                            .padding(.top)
-                            .accessibilityLabel("please choose your sex")
-                    }
-                    
+                            
+                        }.frame(maxWidth: .infinity, alignment: .leading)
+                            .background(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .fill(Color(hex:0xE9F9FB))
+                                )
+                            .padding(.init(top: 0, leading: 15, bottom: 5, trailing: 15))
+
+                
+                        
+                    }.frame(maxWidth: .infinity, alignment: .leading)
+                                        
                     Spacer()
+                    
                 }.padding(.bottom)
                 
-                HStack{
-                    Text("Age           ")
-                        .font(.body)
-                        .multilineTextAlignment(.leading)
-                        .padding(.leading)
-                        .accessibilityLabel("Age")
-
-                    Menu {
-                        Picker(selection: $global.age) {
-                            ForEach(ages, id: \.self) {
-                                Text($0)
-                            }
-                        } label: {}
-                    } label: {
-                        Text(global.age)
-                            .fontWeight(.medium)
-                            .frame(height: 44)
+                VStack{
+                    HStack{
+                        Text("Age")
                             .font(.body)
-                            .accessibilityLabel("please choose your age")
-                            
-                    }
+                            .padding(.leading)
+                            .accessibilityLabel("Age")
+                    }.frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    HStack{
+                        Section {
+                            Picker(selection: $global.age) {
+                                ForEach(ages, id: \.self) {
+                                    Text($0)
+                                }
+                            } label: {}
+                        }
+                    }.frame(maxWidth: .infinity, alignment: .leading)
+                        .background(
+                            RoundedRectangle(cornerRadius: 5)
+                                .fill(Color(hex:0xE9F9FB))
+                            )
+                        .padding(.init(top: 0, leading: 15, bottom: 5, trailing: 15))
+                    
                     
                     Spacer()
                 }.padding(.bottom)
@@ -178,5 +189,14 @@ struct BodyProfile: View {
 struct BodyProfile_Previews: PreviewProvider {
     static var previews: some View {
         BodyProfile()
+    }
+}
+
+extension Color {
+    init(hex: Int, opacity: Double = 1.0) {
+        let red = Double((hex & 0xff0000) >> 16) / 255.0
+        let green = Double((hex & 0xff00) >> 8) / 255.0
+        let blue = Double((hex & 0xff) >> 0) / 255.0
+        self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
     }
 }
