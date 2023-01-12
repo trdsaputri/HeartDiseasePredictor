@@ -107,29 +107,42 @@ struct BodyCondition: View {
                 }.padding([.leading, .bottom, .trailing])
                     .toggleStyle(SwitchToggleStyle(tint: Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
                     .accessibilityLabel("do you have stroke history")
-                
-                HStack{
-                    Toggle("Do you have diabetic history? ",isOn: $global.isDiabetic)
-                        .accessibilityLabel("do you have diabetic history")
-                        .font(.body)
-                        
-                    if global.isDiabetic {
-                        Text("yes")
-                            .padding(.horizontal)
-                            .font(.body)
-                            .accessibilityLabel("yes")
-                        }
-                    else{
-                        Text("no")
-                            .padding(.horizontal)
-                            .font(.body)
-                            .accessibilityLabel("no")
-                        
+                ZStack{
+                    
+                }
+                VStack{
+                    Text("Do you have a diabetic history?")
+                    HStack{
+                        Spacer().frame(width: 70)
+                        ZStack{
+                            HStack{
+                                if(global.isDiabetic == false){
+                                    Spacer()
+                                }
+                                Rectangle()
+                                    .onTapGesture {
+                                        withAnimation {
+                                            global.isDiabetic.toggle()
+                                        }
+                                    }
+                                    .foregroundColor(.green)
+                                    .frame(width: 100, height: 100).accessibilityLabel(global.isDiabetic ? "yes" : "no")
+                                if(global.isDiabetic == true){
+                                    Spacer()
+                                }
+                            }
+                            HStack{
+                                Spacer()
+                                Text("YES").fontWeight(global.isDiabetic ? .bold : .regular)
+                                Spacer()
+                                Text("NO").fontWeight(global.isDiabetic ? .regular : .bold)
+                                Spacer()
+                            }.opacity(0.5)
+                        }.background(.red)
+                        Spacer().frame(width: 70)
                     }
                 }.padding(.horizontal)
-                    .toggleStyle(SwitchToggleStyle(tint:  Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
                     .font(.body)
-                
             }
             
             Spacer()
