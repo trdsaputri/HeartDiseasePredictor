@@ -9,13 +9,9 @@ import SwiftUI
 
 struct Result: View {
     @ObservedObject var global = UserInfo.global
-    @State var heartPercentage = 0.0
-    @Binding var showResultModal:Bool
+    
     var body: some View {
         VStack{
-            
-            
-            
             Text("PREDICTION RESULT")
                 .font(.title)
                 .fontWeight(.bold)
@@ -23,47 +19,42 @@ struct Result: View {
                 .accessibilityLabel("prediction result")
             
             ScrollView{
-                ZStack{
-                    VStack{
-                        //Insert image here!
-                    }
-                    VStack{
-                        Rectangle().frame(width:150, height: 2 * heartPercentage).foregroundColor(.white).onAppear {
-                            withAnimation(.easeInOut(duration: 2)) {
-                                heartPercentage = global.confident
-                            }
-                        }
-                    }
-                }.frame(width: 150, height: 200, alignment: .bottom).background(.blue).accessibilityLabel("Confident Level: \(global.confident) %")
-                
-                Text("\(global.confident, specifier: "%.2f")% Chance")
-                    .font(.body)
-                    .accessibilityLabel("Confident Level: \(global.confident, specifier: "%.2f") %")
+                Image(global.imageState)
+                    .resizable()
+                    .frame(width: 120, height: 120)
+                    .padding()
+                    .accessibilityLabel("\(global.imageState) icon")
                 
                 Text(global.result)
                     .font(.body)
                     .foregroundColor(resultColor(color: global.resultColor))
                     .accessibilityLabel(global.result)
                 
-                Spacer()
+                Text("Confident Level: \(global.confident) %")
+                    .font(.body)
+                    .accessibilityLabel("Confident Level: \(global.confident) %")
+                
+                HStack{
+                    Text("Result: ")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .padding(.top)
+                        .accessibilityLabel("Here is your result")
+
+                    Spacer()
+                }
                 
                 Text(global.notes)
                     .font(.body)
                     .fontWeight(.medium)
                     //.padding()
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.leading)
                     //.background(Color(hue: 0.588, saturation: 0.022, brightness: 0.959))
                     .cornerRadius(15)
-                    .accessibilityLabel("Your result is : \(global.notes)")
+                    .accessibilityLabel(global.notes)
                 Spacer()
             }.padding(.horizontal)
             
-            
-            Spacer()
-            
-            Button("< return"){
-                showResultModal = false
-            }.background(.blue).foregroundColor(.white)
             
             Spacer()
             
@@ -87,9 +78,7 @@ func resultColor (color: Int) -> Color{
 }
 
 struct Result_Previews: PreviewProvider {
-    @State static var showResultModal = true
-    
     static var previews: some View {
-        Result(showResultModal: $showResultModal)
+        Result()
     }
 }

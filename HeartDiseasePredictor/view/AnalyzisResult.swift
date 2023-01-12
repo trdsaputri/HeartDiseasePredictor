@@ -132,7 +132,7 @@ struct AnalyzisResult: View {
                 .accessibilityLabel("Analyze the inputted data")
         }
         .sheet(isPresented: $showResultModal){
-            Result(showResultModal: $showResultModal)
+            Result()
         }
         .padding()
         .accessibility(label: Text("Analyze the inputted data"))
