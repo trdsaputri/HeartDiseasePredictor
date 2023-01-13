@@ -39,55 +39,14 @@ struct BodyCondition: View {
                 
                 HStack{
                     IntegerPickerFormField(select: $global.MentalHealth, startIndex: 0, endIndex: 30 , header: "How many days (in the last 30 days) you have mental breakdowns? ")
-
-//                    Text("how many days (in the last 30 days) you have mental breakdowns? ")
-//                        .multilineTextAlignment(.leading)
-//                        .padding(.leading)
-//                        .accessibilityLabel("how many days (in the last 30 days) you have mental breakdowns?")
-//
-//                    Spacer()
-//
-//                    Menu {
-//                        Picker(selection: $global.MentalHealth) {
-//                            ForEach(0...30, id: \.self) {
-//                                            Text("\($0)")
-//                                        }
-//                        } label: {}
-//                    } label: {
-//                        Text("\(global.MentalHealth)")
-//                            .fontWeight(.medium)
-//                            .frame(width: 80, height: 50)
-//                            .font(.body)
-//                            .accessibilityLabel("please choose how many days in the last 30 days you have mental breakdowns")
-//                    }
+                    
                 }
                 
                 
                 HStack{
                     IntegerPickerFormField(select: $global.SleepTime, startIndex: 1, endIndex: 24 , header: "In average, how many hours do you sleep regularly?")
-                    
-//                    Text("In average, how many hours do you sleep regularly?")
-//                        .multilineTextAlignment(.leading)
-//                        .padding(.leading)
-//                        .accessibilityLabel("In average, how many hours do you sleep regularly?")
-//
-//                    Spacer()
-//
-//                    Menu {
-//                        Picker(selection: $global.SleepTime) {
-//                            ForEach(1...24, id: \.self) {
-//                                            Text("\($0)")
-//                                        }
-//                        } label: {}
-//                    } label: {
-//                        Text("\(global.SleepTime)")
-//                            .fontWeight(.medium)
-//                            .frame(width: 80, height: 50)
-//                            .font(.body)
-//                            .accessibilityLabel("please choose the average hours of your sleep time")
-//                    }
                 }
-
+                
                 HStack{
                     Text("HEALTH HISTORY")
                         .font(.headline)
@@ -95,13 +54,13 @@ struct BodyCondition: View {
                         .fontWeight(.bold)
                         .padding([.leading, .bottom])
                         .accessibilityLabel("Health History")
-
+                    
                 }.frame(alignment: .center)
                 
                 VStack{
                     Text("Do you have a stroke history?")
                         .accessibilityLabel("do you have a diabetic history?")
-
+                    
                     HStack{
                         Spacer()
                         ZStack{
@@ -124,11 +83,11 @@ struct BodyCondition: View {
                                 Spacer().frame(width: 100)
                                 Text("NO").fontWeight(.bold)
                                     .foregroundColor(global.isStroke ? .gray : .white)
-
+                                
                                 Spacer()
                             }
-                                .font(.system(size: 30))
-                        
+                            .font(.system(size: 30))
+                            
                         }.frame(width: 300, height: 70)
                             .cornerRadius(10)
                         Spacer()
@@ -140,35 +99,13 @@ struct BodyCondition: View {
                     }
                 }.padding(.horizontal)
                     .font(.body)
-
-                
-//                HStack{
-//                    Toggle("Do you have stroke history? ",isOn: $global.isStroke)
-//                        .accessibilityLabel("do you have stroke history")
-//                        .font(.body)
-//
-//                    if global.isStroke {
-//                        Text("yes")
-//                            .padding(.horizontal)
-//                            .font(.body)
-//                            .accessibilityLabel("yes")
-//                        }
-//                    else{
-//                        Text("no")
-//                            .padding(.horizontal)
-//                            .font(.body)
-//                            .accessibilityLabel("no")
-//                    }
-//                }.padding([.leading, .bottom, .trailing])
-//                    .toggleStyle(SwitchToggleStyle(tint: Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
-//                    .accessibilityLabel("do you have stroke history")
                 
                 Spacer().frame(height: 20)
                 
                 VStack{
                     Text("Do you have a diabetic history?")
                         .accessibilityLabel("do you have a diabetic history?")
-
+                    
                     HStack{
                         Spacer()
                         ZStack{
@@ -191,11 +128,11 @@ struct BodyCondition: View {
                                 Spacer().frame(width: 100)
                                 Text("NO").fontWeight(.bold)
                                     .foregroundColor(global.isDiabetic ? .gray : .white)
-
+                                
                                 Spacer()
                             }
-                                .font(.system(size: 30))
-                        
+                            .font(.system(size: 30))
+                            
                         }.frame(width: 300, height: 70)
                             .cornerRadius(10)
                         Spacer()
@@ -213,9 +150,9 @@ struct BodyCondition: View {
             
             HStack{
                 Button(action: {
-                                    withAnimation (.easeInOut(duration: 1.0)) {
-                                        global.selectionPage = global.selectionPage - 1
-                                    }
+                    withAnimation (.easeInOut(duration: 1.0)) {
+                        global.selectionPage = global.selectionPage - 1
+                    }
                 }) {
                     Image(systemName: "arrow.left")
                         .padding()
@@ -229,9 +166,9 @@ struct BodyCondition: View {
                 Spacer()
                 
                 Button(action: {
-                                    withAnimation (.easeInOut(duration: 1.0)) {
-                                        global.selectionPage = global.selectionPage + 1
-                                    }
+                    withAnimation (.easeInOut(duration: 1.0)) {
+                        global.selectionPage = global.selectionPage + 1
+                    }
                 }) {
                     Image(systemName: "arrow.right")
                         .padding()

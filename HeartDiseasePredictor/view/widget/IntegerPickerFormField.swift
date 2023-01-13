@@ -23,6 +23,7 @@ struct IntegerPickerFormField: View {
             HStack {
                 Text(header)
                     .font(.body)
+                    .accessibilityLabel(header)
                 Spacer()
             }
 //           
@@ -49,7 +50,7 @@ struct IntegerPickerFormField: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 4)
                 .fill(Color("form")))
-            
+            .accessibilityLabel("Please pick a \(header)")
             
         }
         .padding(.horizontal)

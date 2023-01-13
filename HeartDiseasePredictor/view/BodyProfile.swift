@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct BodyProfile: View {
-
+    
     @ObservedObject var global = UserInfo.global
-
+    
     
     let sexs = ["Male","Female"]
     
@@ -44,50 +44,6 @@ struct BodyProfile: View {
                     
                     TextFormFieldCustom(value: $global.height, header: "Height (cm)  ", placeHolder: "centimeters", accessLabel: "height in centimeters")
                     
-    //                HStack{
-    //                    Text("Weight (kg)  ")
-    //                        .font(.body)
-    //                        .padding(.leading)
-    //                        .accessibilityLabel("Weight in kilogram")
-    //
-    //                    Spacer()
-    //                }
-    //
-    //                HStack{
-    //                    TextField("kilograms", text: $global.weight)
-    //                        .font(.body)
-    //                        .padding(.leading)
-    //                        .frame(width: 375)
-    //                        .textFieldStyle(RoundedBorderTextFieldStyle())
-    //                        .foregroundColor(.blue)
-    //                        .keyboardType(.decimalPad)
-    //                        .accessibilityLabel("Please fill out your weight in kilogram")
-    //
-    //                    Spacer()
-    //                }
-    //                .padding(.bottom)
-    //
-    //
-    //                HStack{
-    //                    Text("Height (cm)  ")
-    //                        .font(.body)
-    //                        .padding(.leading)
-    //                        .accessibilityLabel("height in centimeters")
-    //                    Spacer()
-    //                }
-    //
-    //                HStack{
-    //                    TextField("centimeters", text: $global.height)
-    //                        .font(.body)
-    //                        .padding(.leading)
-    //                        .frame(width: 375)
-    //                        .textFieldStyle(RoundedBorderTextFieldStyle())
-    //                        .foregroundColor(.blue)
-    //                        .keyboardType(.decimalPad)
-    //                        .accessibilityLabel("please fill out your height in centimeters")
-    //
-    //                    Spacer()
-    //                }
                 }
                 
                 Spacer()
@@ -95,9 +51,9 @@ struct BodyProfile: View {
                 HStack{
                     Spacer()
                     Button(action: {
-                                        withAnimation (.easeInOut(duration: 1.0)) {
-                                            global.selectionPage = global.selectionPage + 1
-                                        }
+                        withAnimation (.easeInOut(duration: 1.0)) {
+                            global.selectionPage = global.selectionPage + 1
+                        }
                     }) {
                         Image(systemName: "arrow.right")
                             .padding()
@@ -113,7 +69,7 @@ struct BodyProfile: View {
             }
         }.ignoresSafeArea()
     }
-
+    
 }
 
 struct BodyProfile_Previews: PreviewProvider {

@@ -14,14 +14,6 @@ struct Result: View {
     var body: some View {
         VStack{
             
-            
-            
-//            Text("PREDICTION RESULT")
-//                .font(.title)
-//                .fontWeight(.bold)
-//                .padding(.bottom)
-//                .accessibilityLabel("prediction result")
-            
             VStack {
                 Spacer().frame(height: 30)
                 ZStack{
@@ -56,10 +48,7 @@ struct Result: View {
                 Text(global.notes)
                     .font(.body)
                     .foregroundColor(.white)
-                    //.padding()
                     .multilineTextAlignment(.center)
-                    //.background(Color(hue: 0.588, saturation: 0.022, brightness: 0.959))
-//                    .cornerRadius(15)
                     .accessibilityLabel("Your result is : \(global.notes)")
             }
             .padding(.horizontal, 50)

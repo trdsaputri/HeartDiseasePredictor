@@ -19,8 +19,10 @@ struct PickerFormField: View {
             HStack {
                 Text(header)
                     .font(.body)
+                    .accessibilityLabel(header)
                 Spacer()
             }
+            
             DisclosureGroup(select, isExpanded: $isExpanded) {
                 ScrollView {
                     VStack(spacing: 8) {
@@ -44,6 +46,7 @@ struct PickerFormField: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 4)
                 .fill(Color("form")))
+            .accessibilityLabel("Please pick a \(header)")
             
             
         }

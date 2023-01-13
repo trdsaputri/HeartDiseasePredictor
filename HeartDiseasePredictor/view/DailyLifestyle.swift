@@ -24,13 +24,13 @@ struct DailyLifestyle: View {
             .padding()
             .frame(height: 133, alignment: .bottom)
             .background(Rectangle().fill(Color("primary")))
-
+            
             
             ScrollView{
                 VStack{
                     Text("Do you smoke?")
                         .accessibilityLabel("do you smoke?")
-
+                    
                     HStack{
                         Spacer()
                         ZStack{
@@ -53,11 +53,11 @@ struct DailyLifestyle: View {
                                 Spacer().frame(width: 100)
                                 Text("NO").fontWeight(.bold)
                                     .foregroundColor(global.isSmoking ? .gray : .white)
-
+                                
                                 Spacer()
                             }
-                                .font(.system(size: 30))
-                        
+                            .font(.system(size: 30))
+                            
                         }.frame(width: 300, height: 70)
                             .cornerRadius(10)
                         Spacer()
@@ -74,7 +74,7 @@ struct DailyLifestyle: View {
                 VStack{
                     Text("Do you drink alcohol?")
                         .accessibilityLabel("do you drink alcohol?")
-
+                    
                     HStack{
                         Spacer()
                         ZStack{
@@ -97,11 +97,11 @@ struct DailyLifestyle: View {
                                 Spacer().frame(width: 100)
                                 Text("NO").fontWeight(.bold)
                                     .foregroundColor(global.isDrinking ? .gray : .white)
-
+                                
                                 Spacer()
                             }
-                                .font(.system(size: 30))
-                        
+                            .font(.system(size: 30))
+                            
                         }.frame(width: 300, height: 70)
                             .cornerRadius(10)
                         Spacer()
@@ -118,7 +118,7 @@ struct DailyLifestyle: View {
                 VStack{
                     Text("Do you usually excercise?")
                         .accessibilityLabel("do you usually excercise?")
-
+                    
                     HStack{
                         Spacer()
                         ZStack{
@@ -141,11 +141,11 @@ struct DailyLifestyle: View {
                                 Spacer().frame(width: 100)
                                 Text("NO").fontWeight(.bold)
                                     .foregroundColor(global.isExercise ? .gray : .white)
-
+                                
                                 Spacer()
                             }
-                                .font(.system(size: 30))
-                        
+                            .font(.system(size: 30))
+                            
                         }.frame(width: 300, height: 70)
                             .cornerRadius(10)
                         Spacer()
@@ -163,7 +163,7 @@ struct DailyLifestyle: View {
                     Text("Do you physically move around to perform your daily task?")
                         .accessibilityLabel("do you physically move around to perform your daily task?")
                         .multilineTextAlignment(.center)
-
+                    
                     HStack{
                         Spacer()
                         ZStack{
@@ -186,11 +186,11 @@ struct DailyLifestyle: View {
                                 Spacer().frame(width: 100)
                                 Text("NO").fontWeight(.bold)
                                     .foregroundColor(global.isWorkActive ? .gray : .white)
-
+                                
                                 Spacer()
                             }
-                                .font(.system(size: 30))
-                        
+                            .font(.system(size: 30))
+                            
                         }.frame(width: 300, height: 70)
                             .cornerRadius(10)
                         Spacer()
@@ -204,82 +204,6 @@ struct DailyLifestyle: View {
                 
                 Spacer().frame(height: 20)
                 
-//                HStack{
-//                    Toggle("Do you smoke? ",isOn: $global.isSmoking)
-//                        .padding(.horizontal)
-//                        .accessibilityLabel("do you smoke?")
-//
-//                    if global.isSmoking {
-//                        Text("yes")
-//                            .padding(.horizontal)
-//                            .accessibilityLabel("yes")
-//                        }
-//                    else{
-//                        Text("no")
-//                            .padding(.horizontal)
-//                            .accessibilityLabel("no")
-//                    }
-//                }.padding([.top, .leading, .trailing])
-//                    .toggleStyle(SwitchToggleStyle(tint: Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
-//
-//                HStack{
-//                    Toggle("Do you drink alcohol? ",isOn: $global.isDrinking)
-//                        .padding(.horizontal)
-//                        .accessibilityLabel("do you drink alcohol?")
-//
-//                    if global.isDrinking {
-//                        Text("yes")
-//                            .padding(.horizontal)
-//                            .accessibilityLabel("yes")
-//                        }
-//                    else{
-//                        Text("no")
-//                            .padding(.horizontal)
-//                            .accessibilityLabel("no")
-//                    }
-//                }.padding(.horizontal)
-//                    .toggleStyle(SwitchToggleStyle(tint: Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
-//
-//                HStack{
-//
-//                    Toggle("Do you usually take exercise? ", isOn: $global.isExercise)
-//                        .padding(.horizontal)
-//                        .accessibilityLabel("do you usually take exercise")
-//
-//                    if global.isExercise {
-//                        Text("yes")
-//                            .padding(.horizontal)
-//                            .accessibilityLabel("yes")
-//                        }
-//                    else{
-//                        Text("no")
-//                            .padding(.horizontal)
-//                            .accessibilityLabel("no")
-//                    }
-//
-//                }.padding(.horizontal)
-//                    .toggleStyle(SwitchToggleStyle(tint: Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
-//
-//                HStack{
-//
-//                    Toggle("Do you pysically move around to perform your daily task? ", isOn: $global.isWorkActive)
-//                        .padding(.horizontal)
-//                        .accessibilityLabel("Do you pysically move around to perform your daily task?")
-//
-//                    if global.isWorkActive {
-//                        Text("yes")
-//                            .padding(.horizontal)
-//                            .accessibilityLabel("yes")
-//                        }
-//                    else{
-//                        Text("no")
-//                            .padding(.horizontal)
-//                            .accessibilityLabel("no")
-//                    }
-//
-//                }.padding(.horizontal)
-//                    .toggleStyle(SwitchToggleStyle(tint: Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
-                
                 AnalyzisResult()
             }
             
@@ -288,9 +212,9 @@ struct DailyLifestyle: View {
             
             HStack{
                 Button(action: {
-                                    withAnimation (.easeInOut(duration: 1.0)) {
-                                        global.selectionPage = global.selectionPage - 1
-                                    }
+                    withAnimation (.easeInOut(duration: 1.0)) {
+                        global.selectionPage = global.selectionPage - 1
+                    }
                 }) {
                     Image(systemName: "arrow.left")
                         .padding()
@@ -298,7 +222,6 @@ struct DailyLifestyle: View {
                         .foregroundColor(.white)
                         .background(Circle().fill(Color("primary")))
                         .accessibilityAddTraits([.isButton])
-                        //.accessibilityLabel("click to go back to the body condition form")
                 }.accessibilityLabel("click to go back to the body condition form")
                 
                 Spacer()
