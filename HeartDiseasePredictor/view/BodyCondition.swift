@@ -108,11 +108,6 @@ struct BodyCondition: View {
                                     Spacer()
                                 }
                                 Rectangle()
-                                    .onTapGesture {
-                                        withAnimation {
-                                            global.isStroke.toggle()
-                                        }
-                                    }
                                     .foregroundColor(Color("primary"))
                                     .frame(width:150, height: .infinity).accessibilityLabel(global.isStroke ? "yes" : "no")
                                     .cornerRadius(10)
@@ -129,6 +124,10 @@ struct BodyCondition: View {
                                     .foregroundColor(global.isStroke ? .gray : .white)
 
                                 Spacer()
+                            }.onTapGesture {
+                                withAnimation {
+                                    global.isStroke.toggle()
+                                }
                             }
                                 .font(.system(size: 30))
                         
@@ -175,11 +174,6 @@ struct BodyCondition: View {
                                     Spacer()
                                 }
                                 Rectangle()
-                                    .onTapGesture {
-                                        withAnimation {
-                                            global.isDiabetic.toggle()
-                                        }
-                                    }
                                     .foregroundColor(Color("primary"))
                                     .frame(width:150, height: .infinity).accessibilityLabel(global.isDiabetic ? "yes" : "no")
                                     .cornerRadius(10)
@@ -196,6 +190,10 @@ struct BodyCondition: View {
                                     .foregroundColor(global.isDiabetic ? .gray : .white)
 
                                 Spacer()
+                            }.onTapGesture {
+                                withAnimation {
+                                    global.isDiabetic.toggle()
+                                }
                             }
                                 .font(.system(size: 30))
                         
