@@ -131,7 +131,7 @@ struct AnalyzisResult: View {
                 .cornerRadius(15)
                 .accessibilityLabel("Analyze the inputted data")
         }
-        .sheet(isPresented: $showResultModal){
+        .fullScreenCover(isPresented: $showResultModal){
             Result(showResultModal: $showResultModal)
         }
         .padding()

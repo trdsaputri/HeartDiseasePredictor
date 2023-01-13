@@ -25,14 +25,15 @@ struct Result: View {
             ScrollView{
                 ZStack{
                     VStack{
-                        //Insert image here!
-                    }
-                    VStack{
                         Rectangle().frame(width:150, height: 2 * heartPercentage).foregroundColor(.white).onAppear {
                             withAnimation(.easeInOut(duration: 2)) {
                                 heartPercentage = global.confident
                             }
                         }
+                    }
+                    VStack{
+                        //Insert image here!
+                        Image("goodheart")
                     }
                 }.frame(width: 150, height: 200, alignment: .bottom).background(.blue).accessibilityLabel("Confident Level: \(global.confident) %")
                 
