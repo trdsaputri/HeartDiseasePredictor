@@ -25,17 +25,17 @@ struct Result: View {
             ScrollView{
                 ZStack{
                     VStack{
-                        Rectangle().frame(width:150, height: 2 * heartPercentage).foregroundColor(.white).onAppear {
+                        Rectangle().frame(width:200, height: 3 * heartPercentage).foregroundColor(.white).onAppear {
                             withAnimation(.easeInOut(duration: 2)) {
                                 heartPercentage = global.confident
                             }
-                        }
-                    }
+                        }.padding()
+                    }.frame(height:300, alignment: .bottom).background(.red)
                     VStack{
                         //Insert image here!
-                        Image("goodheart")
+                        Image("goodheart").resizable().aspectRatio(contentMode: .fit)
                     }
-                }.frame(width: 150, height: 200, alignment: .bottom).background(.blue).accessibilityLabel("Confident Level: \(global.confident) %")
+                }.frame(width: .infinity, height: 300, alignment: .bottom).background(.blue).accessibilityLabel("Confident Level: \(global.confident) %")
                 
                 Text("\(global.confident, specifier: "%.2f")% Chance")
                     .font(.body)
