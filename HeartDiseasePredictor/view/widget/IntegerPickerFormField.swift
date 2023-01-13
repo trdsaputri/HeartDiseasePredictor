@@ -25,22 +25,7 @@ struct IntegerPickerFormField: View {
                     .font(.body)
                 Spacer()
             }
-//            HStack {
-//                Picker(selection: $select,
-//                       label:
-//                        Text(header)
-//                    .accessibilityLabel("please choose your \(header)")){
-//                        ForEach(startIndex...endIndex, id: \.self) {
-//                            Text(String($0))
-//                                .foregroundColor(.gray)
-//                                .tag($0)
-//                        }
-//                    }
-//                    .tint(.black)
-//
-//                Spacer()
-//                Image(systemName: "chevron.right")
-//            }
+//           
             
             DisclosureGroup("\(select)", isExpanded: $isExpanded) {
                 ScrollView{

@@ -14,7 +14,7 @@ struct DailyLifestyle: View {
     var body: some View {
         VStack{
             HStack(alignment: .bottom) {
-                Text("Body Condition")
+                Text("Daily Lifestyle")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)

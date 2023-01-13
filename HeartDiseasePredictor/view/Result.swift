@@ -23,6 +23,7 @@ struct Result: View {
 //                .accessibilityLabel("prediction result")
             
             VStack {
+                Spacer().frame(height: 30)
                 ZStack{
                     VStack{
                         Rectangle().frame(width:200, height: 2.7 * heartPercentage).foregroundColor(.white).onAppear {
@@ -32,9 +33,11 @@ struct Result: View {
                         }
                     }.frame(height:270, alignment: .bottom)
                     
-                    //Insert image here!
                     Image(global.imageState == "happy" ? "goodheart" : "badheart")
+                    
                 }.frame(alignment: .bottom).accessibilityLabel("Confident Level: \(global.confident) %")
+                
+                Spacer().frame(height: 20)
                 
                 Text("\(global.confident, specifier: "%.2f")% Chance")
                     .font(.body)

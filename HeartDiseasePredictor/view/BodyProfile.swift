@@ -9,10 +9,8 @@ import SwiftUI
 
 struct BodyProfile: View {
 
-    
     @ObservedObject var global = UserInfo.global
 
-    
     
     let sexs = ["Male","Female"]
     
@@ -34,11 +32,6 @@ struct BodyProfile: View {
             .background(Rectangle().fill(Color("primary")))
             
             VStack{
-    //            Text("Body Profile")
-    //                .font(.title)
-    //                .fontWeight(.bold)
-    //                .padding(.bottom)
-    //                .accessibilityLabel("Body Profile Form")
                 
                 ScrollView{
                     PickerFormField(select: $global.Sex, list: sexs, header: "Sex")
@@ -46,32 +39,6 @@ struct BodyProfile: View {
                     PickerFormField(select: $global.age, list: ages, header: "Age")
                     
                     PickerFormField(select: $global.race, list: races, header: "Race")
-                    
-    //                HStack{
-    //                    Text("Race         ")
-    //                        .font(.body)
-    //                        .multilineTextAlignment(.leading)
-    //                        .padding(.leading)
-    //                        .accessibilityLabel("Race")
-    //
-    //                    Menu {
-    //                        Picker(selection: $global.race) {
-    //                            ForEach(races, id: \.self) {
-    //                                Text($0)
-    //                            }
-    //                        } label: {}
-    //                    } label: {
-    //                        Text(global.race)
-    //                            .fontWeight(.medium)
-    //                            .frame(height: 44)
-    //                            .font(.body)
-    //                            .accessibilityLabel("please choose your race")
-    //                    }
-    //
-    //                    Spacer()
-    //
-    //                }
-    //                .padding(.bottom)
                     
                     TextFormFieldCustom(value: $global.weight, header: "Weight (kg)  ", placeHolder: "kilograms", accessLabel: "Weight in kilogram")
                     
@@ -155,11 +122,4 @@ struct BodyProfile_Previews: PreviewProvider {
     }
 }
 
-extension Color {
-    init(hex: Int, opacity: Double = 1.0) {
-        let red = Double((hex & 0xff0000) >> 16) / 255.0
-        let green = Double((hex & 0xff00) >> 8) / 255.0
-        let blue = Double((hex & 0xff) >> 0) / 255.0
-        self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
-    }
-}
+
