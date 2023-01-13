@@ -16,65 +16,73 @@ struct Result: View {
             
             
             
-            Text("PREDICTION RESULT")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.bottom)
-                .accessibilityLabel("prediction result")
+//            Text("PREDICTION RESULT")
+//                .font(.title)
+//                .fontWeight(.bold)
+//                .padding(.bottom)
+//                .accessibilityLabel("prediction result")
             
-            ScrollView{
+            VStack {
                 ZStack{
                     VStack{
-                        Rectangle().frame(width:200, height: 3 * heartPercentage).foregroundColor(.white).onAppear {
+                        Rectangle().frame(width:200, height: 2.7 * heartPercentage).foregroundColor(.white).onAppear {
                             withAnimation(.easeInOut(duration: 2)) {
                                 heartPercentage = global.confident
                             }
-                        }.padding()
-                    }.frame(height:300, alignment: .bottom).background(.red)
-                    VStack{
-                        //Insert image here!
-                        Image("goodheart").resizable().aspectRatio(contentMode: .fit)
-                    }
-                }.frame(width: .infinity, height: 300, alignment: .bottom).background(.blue).accessibilityLabel("Confident Level: \(global.confident) %")
+                        }
+                    }.frame(height:270, alignment: .bottom)
+                    
+                    //Insert image here!
+                    Image(global.imageState == "happy" ? "goodheart" : "badheart")
+                }.frame(alignment: .bottom).accessibilityLabel("Confident Level: \(global.confident) %")
                 
                 Text("\(global.confident, specifier: "%.2f")% Chance")
                     .font(.body)
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
                     .accessibilityLabel("Confident Level: \(global.confident, specifier: "%.2f") %")
                 
                 Text(global.result)
-                    .font(.body)
-                    .foregroundColor(resultColor(color: global.resultColor))
+                    .font(.system(size: 24, weight: .bold))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
                     .accessibilityLabel(global.result)
                 
-                Spacer()
+                Spacer().frame(height: 20)
                 
                 Text(global.notes)
                     .font(.body)
-                    .fontWeight(.medium)
+                    .foregroundColor(.white)
                     //.padding()
                     .multilineTextAlignment(.center)
                     //.background(Color(hue: 0.588, saturation: 0.022, brightness: 0.959))
-                    .cornerRadius(15)
+//                    .cornerRadius(15)
                     .accessibilityLabel("Your result is : \(global.notes)")
-                Spacer()
-            }.padding(.horizontal)
+            }
+            .padding(.horizontal, 50)
             
             
             Spacer()
             
-            Button("< return"){
+            Button("< Return"){
                 showResultModal = false
-            }.background(.blue).foregroundColor(.white)
+            }
+            .padding(.init(top: 10, leading: 18, bottom: 10, trailing: 18))
+            .background(.white, in: Capsule())
+            .foregroundColor(global.imageState == "happy" ? Color("headline") : Color("bad"))
+            .fontWeight(.bold)
             
-            Spacer()
+            Spacer().frame(height: 40)
             
             Text("Disclaimer: \nThe result is not 100% indicate your health condition. Please consult with your doctor for further validation")
                 .font(.footnote)
                 .fontWeight(.light)
-                .foregroundColor(Color.gray)
+                .foregroundColor(.white.opacity(0.8))
                 .padding(.horizontal)
+                .multilineTextAlignment(.center)
                 .accessibilityLabel("Disclaimer: The result is not 100% indicate your health condition. Please consult with your doctor for further validation")
         }
+        .background(global.imageState == "happy" ? Color("primary") : Color("bad"))
     }
 }
 

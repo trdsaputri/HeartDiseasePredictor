@@ -11,6 +11,7 @@ struct PickerFormField: View {
     @Binding var select: String
     var list: [String]
     var header: String
+    @State private var isExpanded = false
     
     
     var body: some View {
@@ -20,23 +21,26 @@ struct PickerFormField: View {
                     .font(.body)
                 Spacer()
             }
-            HStack {
-                Picker(selection: $select,
-                       label:
-                        Text(header)
-                    .accessibilityLabel("please choose your \(header)")){
-                        ForEach(list, id: \.self) {
-                            Text($0)
-                                .foregroundColor(.gray)
-                                .tag($0)
+            DisclosureGroup(select, isExpanded: $isExpanded) {
+                ScrollView {
+                    VStack(spacing: 8) {
+                        ForEach(list, id: \.self) { text in
+                            Text(text)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                                .onTapGesture {
+                                    self.select = text
+                                    withAnimation{
+                                        self.isExpanded.toggle()
+                                    }
+                                }
                         }
                     }
-                    .tint(.black)
-                
-                Spacer()
-                Image(systemName: "chevron.right")
+                }
+                .frame(maxHeight: 150)
             }
-            .padding(.init(top: 12, leading: 0, bottom: 12, trailing: 12))
+            .tint(.black)
+            .padding(.init(top: 12, leading: 12, bottom: 12, trailing: 12))
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 4)
                 .fill(Color("form")))

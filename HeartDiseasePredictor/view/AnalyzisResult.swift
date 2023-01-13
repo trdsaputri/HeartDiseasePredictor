@@ -122,13 +122,13 @@ struct AnalyzisResult: View {
             self.showResultModal.toggle()
         }
         label:{
-            Label("analyze my data", systemImage: "stethoscope")
+            Text("Analyze My Data")
                 .padding()
-                .frame(width: 370, alignment: .center)
-                .background(Color(red: 0.511, green: 0.723, blue: 0.97))
-                .foregroundColor(Color.black)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color("primary"), in: Capsule())
+                .foregroundColor(.white)
                 .font(.body)
-                .cornerRadius(15)
+                .fontWeight(.bold)
                 .accessibilityLabel("Analyze the inputted data")
         }
         .fullScreenCover(isPresented: $showResultModal){

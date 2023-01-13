@@ -27,7 +27,6 @@ struct DailyLifestyle: View {
 
             
             ScrollView{
-                Spacer().frame(height: 30)
                 VStack{
                     Text("Do you smoke?")
                         .accessibilityLabel("do you smoke?")
@@ -41,7 +40,7 @@ struct DailyLifestyle: View {
                                 }
                                 Rectangle()
                                     .foregroundColor(Color("primary"))
-                                    .frame(width:150, height: .infinity).accessibilityLabel(global.isSmoking ? "yes" : "no")
+                                    .frame(width:150).accessibilityLabel(global.isSmoking ? "yes" : "no")
                                     .cornerRadius(10)
                                 if(global.isSmoking == true){
                                     Spacer()
@@ -56,10 +55,6 @@ struct DailyLifestyle: View {
                                     .foregroundColor(global.isSmoking ? .gray : .white)
 
                                 Spacer()
-                            }.onTapGesture {
-                                withAnimation {
-                                    global.isSmoking.toggle()
-                                }
                             }
                                 .font(.system(size: 30))
                         
@@ -67,9 +62,14 @@ struct DailyLifestyle: View {
                             .cornerRadius(10)
                         Spacer()
                     }
+                    .onTapGesture {
+                        withAnimation {
+                            global.isSmoking.toggle()
+                        }
+                    }
                 }.padding(.horizontal)
                 
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 20)
                 
                 VStack{
                     Text("Do you drink alcohol?")
@@ -84,7 +84,7 @@ struct DailyLifestyle: View {
                                 }
                                 Rectangle()
                                     .foregroundColor(Color("primary"))
-                                    .frame(width:150, height: .infinity).accessibilityLabel(global.isDrinking ? "yes" : "no")
+                                    .frame(width:150).accessibilityLabel(global.isDrinking ? "yes" : "no")
                                     .cornerRadius(10)
                                 if(global.isDrinking == true){
                                     Spacer()
@@ -99,10 +99,6 @@ struct DailyLifestyle: View {
                                     .foregroundColor(global.isDrinking ? .gray : .white)
 
                                 Spacer()
-                            }.onTapGesture {
-                                withAnimation {
-                                    global.isDrinking.toggle()
-                                }
                             }
                                 .font(.system(size: 30))
                         
@@ -110,9 +106,14 @@ struct DailyLifestyle: View {
                             .cornerRadius(10)
                         Spacer()
                     }
+                    .onTapGesture {
+                        withAnimation {
+                            global.isDrinking.toggle()
+                        }
+                    }
                 }.padding(.horizontal)
                 
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 20)
                 
                 VStack{
                     Text("Do you usually excercise?")
@@ -127,7 +128,7 @@ struct DailyLifestyle: View {
                                 }
                                 Rectangle()
                                     .foregroundColor(Color("primary"))
-                                    .frame(width:150, height: .infinity).accessibilityLabel(global.isExercise ? "yes" : "no")
+                                    .frame(width:150).accessibilityLabel(global.isExercise ? "yes" : "no")
                                     .cornerRadius(10)
                                 if(global.isExercise == true){
                                     Spacer()
@@ -142,10 +143,6 @@ struct DailyLifestyle: View {
                                     .foregroundColor(global.isExercise ? .gray : .white)
 
                                 Spacer()
-                            }.onTapGesture {
-                                withAnimation {
-                                    global.isExercise.toggle()
-                                }
                             }
                                 .font(.system(size: 30))
                         
@@ -153,9 +150,14 @@ struct DailyLifestyle: View {
                             .cornerRadius(10)
                         Spacer()
                     }
+                    .onTapGesture {
+                        withAnimation {
+                            global.isExercise.toggle()
+                        }
+                    }
                 }.padding(.horizontal)
                 
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 20)
                 
                 VStack{
                     Text("Do you physically move around to perform your daily task?")
@@ -171,7 +173,7 @@ struct DailyLifestyle: View {
                                 }
                                 Rectangle()
                                     .foregroundColor(Color("primary"))
-                                    .frame(width:150, height: .infinity).accessibilityLabel(global.isWorkActive ? "yes" : "no")
+                                    .frame(width:150).accessibilityLabel(global.isWorkActive ? "yes" : "no")
                                     .cornerRadius(10)
                                 if(global.isWorkActive == true){
                                     Spacer()
@@ -186,10 +188,6 @@ struct DailyLifestyle: View {
                                     .foregroundColor(global.isWorkActive ? .gray : .white)
 
                                 Spacer()
-                            }.onTapGesture {
-                                withAnimation {
-                                    global.isWorkActive.toggle()
-                                }
                             }
                                 .font(.system(size: 30))
                         
@@ -197,9 +195,14 @@ struct DailyLifestyle: View {
                             .cornerRadius(10)
                         Spacer()
                     }
+                    .onTapGesture {
+                        withAnimation {
+                            global.isWorkActive.toggle()
+                        }
+                    }
                 }.padding(.horizontal)
                 
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 20)
                 
 //                HStack{
 //                    Toggle("Do you smoke? ",isOn: $global.isSmoking)
@@ -278,7 +281,6 @@ struct DailyLifestyle: View {
 //                    .toggleStyle(SwitchToggleStyle(tint: Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
                 
                 AnalyzisResult()
-                    .padding(.horizontal)
             }
             
             
@@ -293,8 +295,8 @@ struct DailyLifestyle: View {
                     Image(systemName: "arrow.left")
                         .padding()
                         .font(.body)
-                        .foregroundColor(Color.black)
-                        .background(Circle().fill(Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
+                        .foregroundColor(.white)
+                        .background(Circle().fill(Color("primary")))
                         .accessibilityAddTraits([.isButton])
                         //.accessibilityLabel("click to go back to the body condition form")
                 }.accessibilityLabel("click to go back to the body condition form")

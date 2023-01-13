@@ -135,8 +135,8 @@ struct BodyProfile: View {
                         Image(systemName: "arrow.right")
                             .padding()
                             .font(.body)
-                            .foregroundColor(Color.black)
-                            .background(Circle().fill(Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
+                            .foregroundColor(.white)
+                            .background(Circle().fill(Color("primary")))
                             .accessibilityAddTraits([.isButton])
                             .accessibilityLabel("click to fill body condition information")
                     }

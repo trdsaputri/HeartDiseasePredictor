@@ -15,6 +15,9 @@ struct IntegerPickerFormField: View {
     var header: String
     
     
+    @State private var isExpanded = false
+    
+    
     var body: some View {
         VStack(spacing: 8) {
             HStack {
@@ -22,23 +25,42 @@ struct IntegerPickerFormField: View {
                     .font(.body)
                 Spacer()
             }
-            HStack {
-                Picker(selection: $select,
-                       label:
-                        Text(header)
-                    .accessibilityLabel("please choose your \(header)")){
-                        ForEach(startIndex...endIndex, id: \.self) {
-                            Text(String($0))
-                                .foregroundColor(.gray)
-                                .tag($0)
+//            HStack {
+//                Picker(selection: $select,
+//                       label:
+//                        Text(header)
+//                    .accessibilityLabel("please choose your \(header)")){
+//                        ForEach(startIndex...endIndex, id: \.self) {
+//                            Text(String($0))
+//                                .foregroundColor(.gray)
+//                                .tag($0)
+//                        }
+//                    }
+//                    .tint(.black)
+//
+//                Spacer()
+//                Image(systemName: "chevron.right")
+//            }
+            
+            DisclosureGroup("\(select)", isExpanded: $isExpanded) {
+                ScrollView{
+                    VStack(spacing: 8) {
+                        ForEach(startIndex...endIndex, id:\.self) {num in
+                            Text("\(num)")
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                                .onTapGesture {
+                                    self.select = num
+                                    withAnimation{
+                                        self.isExpanded.toggle()
+                                    }
+                                }
                         }
                     }
-                    .tint(.black)
-                
-                Spacer()
-                Image(systemName: "chevron.right")
+                }.frame(maxHeight: 150)
             }
-            .padding(.init(top: 12, leading: 0, bottom: 12, trailing: 12))
+            .tint(.black)
+            .padding(.init(top: 12, leading: 12, bottom: 12, trailing: 12))
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 4)
                 .fill(Color("form")))

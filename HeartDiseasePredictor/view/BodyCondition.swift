@@ -30,11 +30,12 @@ struct BodyCondition: View {
                 HStack{
                     Text("HEALTH CONDITION")
                         .font(.headline)
+                        .foregroundColor(Color("headline"))
                         .fontWeight(.bold)
-                        .padding([.top, .leading, .bottom])
+                        .padding([.leading, .bottom])
                         .accessibilityLabel("Health Condition")
                     
-                }.frame(width: .infinity ,alignment: .center)
+                }.frame(alignment: .center)
                 
                 HStack{
                     IntegerPickerFormField(select: $global.MentalHealth, startIndex: 0, endIndex: 30 , header: "How many days (in the last 30 days) you have mental breakdowns? ")
@@ -63,7 +64,7 @@ struct BodyCondition: View {
                 
                 
                 HStack{
-                    IntegerPickerFormField(select: $global.MentalHealth, startIndex: 1, endIndex: 24 , header: "In average, how many hours do you sleep regularly?")
+                    IntegerPickerFormField(select: $global.SleepTime, startIndex: 1, endIndex: 24 , header: "In average, how many hours do you sleep regularly?")
                     
 //                    Text("In average, how many hours do you sleep regularly?")
 //                        .multilineTextAlignment(.leading)
@@ -85,16 +86,17 @@ struct BodyCondition: View {
 //                            .font(.body)
 //                            .accessibilityLabel("please choose the average hours of your sleep time")
 //                    }
-                }.padding(.bottom)
+                }
 
                 HStack{
                     Text("HEALTH HISTORY")
                         .font(.headline)
+                        .foregroundColor(Color("headline"))
                         .fontWeight(.bold)
                         .padding([.leading, .bottom])
                         .accessibilityLabel("Health History")
 
-                }.frame(width: .infinity ,alignment: .center)
+                }.frame(alignment: .center)
                 
                 VStack{
                     Text("Do you have a stroke history?")
@@ -109,7 +111,7 @@ struct BodyCondition: View {
                                 }
                                 Rectangle()
                                     .foregroundColor(Color("primary"))
-                                    .frame(width:150, height: .infinity).accessibilityLabel(global.isStroke ? "yes" : "no")
+                                    .frame(width:150).accessibilityLabel(global.isStroke ? "yes" : "no")
                                     .cornerRadius(10)
                                 if(global.isStroke == true){
                                     Spacer()
@@ -124,16 +126,17 @@ struct BodyCondition: View {
                                     .foregroundColor(global.isStroke ? .gray : .white)
 
                                 Spacer()
-                            }.onTapGesture {
-                                withAnimation {
-                                    global.isStroke.toggle()
-                                }
                             }
                                 .font(.system(size: 30))
                         
                         }.frame(width: 300, height: 70)
                             .cornerRadius(10)
                         Spacer()
+                    }
+                    .onTapGesture {
+                        withAnimation {
+                            global.isStroke.toggle()
+                        }
                     }
                 }.padding(.horizontal)
                     .font(.body)
@@ -160,7 +163,7 @@ struct BodyCondition: View {
 //                    .toggleStyle(SwitchToggleStyle(tint: Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
 //                    .accessibilityLabel("do you have stroke history")
                 
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 20)
                 
                 VStack{
                     Text("Do you have a diabetic history?")
@@ -175,7 +178,7 @@ struct BodyCondition: View {
                                 }
                                 Rectangle()
                                     .foregroundColor(Color("primary"))
-                                    .frame(width:150, height: .infinity).accessibilityLabel(global.isDiabetic ? "yes" : "no")
+                                    .frame(width:150).accessibilityLabel(global.isDiabetic ? "yes" : "no")
                                     .cornerRadius(10)
                                 if(global.isDiabetic == true){
                                     Spacer()
@@ -190,16 +193,17 @@ struct BodyCondition: View {
                                     .foregroundColor(global.isDiabetic ? .gray : .white)
 
                                 Spacer()
-                            }.onTapGesture {
-                                withAnimation {
-                                    global.isDiabetic.toggle()
-                                }
                             }
                                 .font(.system(size: 30))
                         
                         }.frame(width: 300, height: 70)
                             .cornerRadius(10)
                         Spacer()
+                    }
+                    .onTapGesture {
+                        withAnimation {
+                            global.isDiabetic.toggle()
+                        }
                     }
                 }.padding(.horizontal)
                     .font(.body)
@@ -216,8 +220,8 @@ struct BodyCondition: View {
                     Image(systemName: "arrow.left")
                         .padding()
                         .font(.body)
-                        .foregroundColor(Color.black)
-                        .background(Circle().fill(Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
+                        .foregroundColor(.white)
+                        .background(Circle().fill(Color("primary")))
                         .accessibilityAddTraits([.isButton])
                         .accessibilityLabel("click to go back to the body profile form")
                 }
@@ -232,8 +236,8 @@ struct BodyCondition: View {
                     Image(systemName: "arrow.right")
                         .padding()
                         .font(.body)
-                        .foregroundColor(Color.black)
-                        .background(Circle().fill(Color(hue: 0.59, saturation: 0.471, brightness: 0.968)))
+                        .foregroundColor(.white)
+                        .background(Circle().fill(Color("primary")))
                         .accessibilityAddTraits([.isButton])
                         .accessibilityLabel("click to fill daily lifestyle information")
                 }
@@ -241,13 +245,8 @@ struct BodyCondition: View {
             }
             .padding()
             
-        }.ignoresSafeArea()
-        .onAppear{
-            print("debug height: \(global.height)")
-            print("debug weight: \(global.weight)")
-            print("debug age: \(global.age)")
-            print("debug gender: \(global.Sex)")
         }
+        .ignoresSafeArea()
     }
 }
 
