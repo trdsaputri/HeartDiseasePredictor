@@ -98,7 +98,7 @@ struct BodyCondition: View {
                 
                 VStack{
                     Text("Do you have a stroke history?")
-                        .accessibilityLabel("do you have a diabetic history")
+                        .accessibilityLabel("do you have a diabetic history?")
 
                     HStack{
                         Spacer()
@@ -164,7 +164,7 @@ struct BodyCondition: View {
                 
                 VStack{
                     Text("Do you have a diabetic history?")
-                        .accessibilityLabel("do you have a diabetic history")
+                        .accessibilityLabel("do you have a diabetic history?")
 
                     HStack{
                         Spacer()
