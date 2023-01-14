@@ -22,7 +22,6 @@
 		7D2DDAF7297113D200978FDC /* IntegerPickerFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DDAF6297113D200978FDC /* IntegerPickerFormField.swift */; };
 		E2100CB32970608500EF9E10 /* PickerForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2100CB22970608500EF9E10 /* PickerForm.swift */; };
 		E2100CB529706CAB00EF9E10 /* TextForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2100CB429706CAB00EF9E10 /* TextForm.swift */; };
-		E2AF6F2929717B6200F7220A /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AF6F2829717B6200F7220A /* DropdownMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +41,6 @@
 		7D2DDAF6297113D200978FDC /* IntegerPickerFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerPickerFormField.swift; sourceTree = "<group>"; };
 		E2100CB22970608500EF9E10 /* PickerForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerForm.swift; sourceTree = "<group>"; };
 		E2100CB429706CAB00EF9E10 /* TextForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForm.swift; sourceTree = "<group>"; };
-		E2AF6F2829717B6200F7220A /* DropdownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +120,6 @@
 				E2100CB22970608500EF9E10 /* PickerForm.swift */,
 				E2100CB429706CAB00EF9E10 /* TextForm.swift */,
 				7D2DDAF6297113D200978FDC /* IntegerPickerFormField.swift */,
-				E2AF6F2829717B6200F7220A /* DropdownMenu.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -210,7 +207,6 @@
 				3854CCF0296BAB4900B9F633 /* BodyProfile.swift in Sources */,
 				3854CCFA296BACDD00B9F633 /* HelpActiveButton.swift in Sources */,
 				3854CCF4296BAC3500B9F633 /* DailyLifestyle.swift in Sources */,
-				E2AF6F2929717B6200F7220A /* DropdownMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
